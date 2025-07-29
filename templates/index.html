@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breast Cancer Prediction Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFBECF;
+      --medium-pink: #F58695;
+      --vibrant-pink: #d04b6a;
+      --deep-maroon: #670D2F;
+      --soft-yellow: #FFF078;
+      --text-dark: #333;
+      --info-pink: #ffe6ed;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff3f6;
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--deep-maroon);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Add to your CSS */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container img {
+  width: 60px;
+  height: auto;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.2;
+  color: white;
+}
+
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 80px 10%;
+      background: linear-gradient(to bottom right, var(--light-pink), white);
+    }
+
+    .left-column, .right-column {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .left-column h1 {
+      font-size: 32px;
+      color: var(--deep-maroon);
+      border-left: 5px solid var(--vibrant-pink);
+      padding-left: 15px;
+    }
+
+    .left-column p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 20px;
+      text-align: justify;
+    }
+
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .start-btn {
+      background-color: var(--vibrant-pink);
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(208, 75, 106, 0.2);
+    }
+
+    .start-btn:hover {
+      background-color: var(--medium-pink);
+      transform: translateY(-2px);
+    }
+
+    .right-column img {
+      width: 100%;
+      max-width: 700px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .announcement {
+      background-color: var(--info-pink);
+      padding: 20px 10%;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .announcement a {
+      color: var(--vibrant-pink);
+      text-decoration: none;
+    }
+
+    .announcement a:hover {
+      text-decoration: underline;
+    }
+
+    .info-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background-color: #fff;
+      padding: 60px 10%;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+
+    .info-cards .card {
+      flex: 1 1 280px;
+      margin: 20px;
+      max-width: 300px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .info-cards img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+      filter: hue-rotate(290deg) saturate(1.5);
+    }
+
+    .info-cards h3 {
+      font-size: 20px;
+      color: var(--vibrant-pink);
+      margin-bottom: 15px;
+    }
+
+    .info-cards p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    .info-cards a {
+      color: var(--vibrant-pink);
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: var(--deep-maroon);
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #ddd;
+    }
+
+    footer span {
+      color: var(--soft-yellow);
+    }
+
+    @media (max-width: 768px) {
+      .main-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right-column img {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <div class="logo-container">
+        <img src="static\Screenshot_2025-05-05_124825-removebg-preview.png" alt="Logo Icon">
+        <div class="logo-text">
+          <div>PREDICT</div>
+          <div>AND</div>
+          <div>DETECT</div>
+          <div>BREAST CANCER</div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/choose">Detection/Prediction</a>
+    </nav>
+  </header>
+
+  <div class="main-section">
+    <div class="left-column">
+      <h1>What is Predict?</h1>
+      <p>
+        Predict is an AI-powered tool that analyzes medical data or breast images to assess the risk of breast cancer. It uses machine learning models to deliver quick and accurate predictions, supporting early detection and better health decisions.</p>
+<p><em> Your health, your data—smartly analyzed for peace of mind.</em></p>
+      
+      <div class="actions">
+        <a href="/predict"><button class="start-btn">▶ Start Predict</button></a>
+      </div>
+    </div>
+    <div class="right-column">
+      <img src="static/Breast_cancer_awareness_logo_icon_design_vector_image_on_VectorStock-removebg-preview.png" alt="Predict Devices Mockup" style="width: 120%; max-width: 700px;">
+    </div>
+  </div>
+
+  <div class="main-section">
+    <div class="left-column">
+      <h1>What is Detect?</h1>
+      <p>
+        Detect is a companion tool designed to help identify early signs of breast cancer using advanced pattern recognition and machine learning techniques. It aids in risk assessment based on patient imaging and biomarker data.
+      </p>
+      <p><em>Detect supports early intervention planning and improves diagnostic confidence.</em></p>
+      <div class="actions">
+        <a href="/detect"><button class="start-btn">🔍 Start Detect</button></a>
+      </div>
+    </div>
+    <div class="right-column">
+      <img src="static/Warning_Signs_Of_Breast_Cancer_Tha__-removebg-preview (1).png" alt="Detect Illustration">
+    </div>
+  </div>
+
+  <div class="main-section">
+    <div class="left-column">
+      <h1>What is Image Classifier?</h1>
+      <p>
+        This feature allows users to upload a medical image (e.g., a scan or biopsy image) and uses an advanced deep learning model (CNN) to automatically classify whether it shows signs of breast cancer.
+      </p>
+      <p><em>It's a fast, AI-powered tool that aids in early detection and screening.</em></p>
+      <div class="actions">
+        <a href="/detect_image"><button class="start-btn">🖼 Start Image Classifier</button></a>
+      </div>
+    </div>
+    <div class="right-column">
+      <img src="static/Mammography_Market_Size__Growth_to_2030-removebg-preview.png" alt="Image Classifier Preview">
+    </div>
+  </div>
+
+  <div class="info-cards">
+    <div class="card">
+      <img src="static/graph.png" alt="Chart Icon" />
+      <h3>What does Predict/Detect do?</h3>
+      <p>
+        Predict/Detectasks for some details about the patient and the cancer. It then uses data about the survival of similar women in the past to show the likely proportion of such women expected to survive up to fifteen years after their surgery with different treatment combinations.
+      </p>
+    </div>
+    <div class="card">
+      <img src="static/family.png" alt="Family Icon" />
+      <h3>Who is Predict/Detect for?</h3>
+      <p>
+        Predict/Detect is for clinicians, patients and their families. <strong>Patients should use it in consultation with a medical professional.</strong>
+      </p>
+    </div>
+    <div class="card">
+      <img src="static/open-book.png" alt="Book Icon" />
+      <h3>Where can I find out more?</h3>
+      <p>
+        To read more go to <strong><a href="/about">About Predict/Detect</a></strong>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    Made with <span>❤️</span> by PALAK, MISHTHI AND NISHTHA
+  </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Types of Breast Cancer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFBECF;
+      --medium-pink: #F58695;
+      --vibrant-pink: #d04b6a;
+      --deep-maroon: #670D2F;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff3f6;
+      color: var(--text-dark);
+      padding: 50px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: var(--deep-maroon);
+      margin-bottom: 40px;
+      border-left: 5px solid var(--vibrant-pink);
+      padding-left: 15px;
+      display: inline-block;
+    }
+
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card-item {
+      display: flex;
+      align-items: flex-start;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      gap: 20px;
+      border-left: 5px solid var(--vibrant-pink);
+    }
+
+    .card-icon {
+      font-size: 20px;
+      font-weight: bold;
+      background-color: var(--light-pink);
+      color: var(--vibrant-pink);
+      padding: 12px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    .card-item strong {
+      color: var(--vibrant-pink);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: white;
+      background-color: var(--vibrant-pink);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: var(--medium-pink);
+    }
+  </style>
+</head>
+<body>
+  <h2>Types of Breast Cancer</h2>
+
+  <div class="card-list">
+
+    <div class="card-item">
+      <div class="card-icon">DCIS</div>
+      <div>
+        <strong>Ductal Carcinoma In Situ (DCIS):</strong>
+        Non-invasive, Stage 0 breast cancer that has not spread into other tissue or lymph nodes. Highly treatable.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">IDC</div>
+      <div>
+        <strong>Invasive Ductal Carcinoma (IDC):</strong>
+        Begins in the milk ducts and spreads into surrounding breast tissue or areas of the body.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">ILC</div>
+      <div>
+        <strong>Invasive Lobular Carcinoma (ILC):</strong>
+        Starts in the lobules and invades surrounding tissue or other parts of the body.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">TNBC</div>
+      <div>
+        <strong>Triple Negative Breast Cancer:</strong>
+        Aggressive form that lacks estrogen, progesterone, and HER2 receptors, limiting treatment options.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">IBC</div>
+      <div>
+        <strong>Inflammatory Breast Cancer (IBC):</strong>
+        A rare, fast-growing cancer affecting the breast skin and often causing a distinct rash or redness.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">MBC</div>
+      <div>
+        <strong>Metastatic Breast Cancer (MBC):</strong>
+        Stage 4 cancer that has spread to distant areas like the bones, liver, lungs, or brain.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">🔍</div>
+      <div>
+        <strong>Lobular Carcinoma In Situ (LCIS):</strong>
+        Not breast cancer, but a condition with abnormal cells in lobules that raises future cancer risk.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">📋</div>
+      <div>
+        <strong>Other Types:</strong>
+        Includes medullary carcinoma, tubular carcinoma, Paget’s disease, angiosarcoma, and others.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">🧍‍♂</div>
+      <div>
+        <strong>Male Breast Cancer:</strong>
+        Though rare, men can develop breast cancer, typically as a lump beneath the nipple or areola.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">🤰</div>
+      <div>
+        <strong>Breast Cancer During Pregnancy:</strong>
+        Treatment options may vary, but pregnancy does not cause breast cancer.
+      </div>
+    </div>
+
+  </div>
+
+  <a href="{{ url_for('about') }}" class="back-link">← Back</a>
+</body>
+</html>

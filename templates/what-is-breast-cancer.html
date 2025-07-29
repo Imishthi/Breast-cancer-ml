@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What is Breast Cancer?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFBECF;
+      --medium-pink: #F58695;
+      --vibrant-pink: #d04b6a;
+      --deep-maroon: #670D2F;
+      --info-pink: #ffe6ed;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff3f6;
+      color: var(--text-dark);
+      padding: 50px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: var(--deep-maroon);
+      margin-bottom: 40px;
+      border-left: 5px solid var(--vibrant-pink);
+      padding-left: 15px;
+      display: inline-block;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      gap: 20px;
+      border-left: 5px solid var(--vibrant-pink);
+      margin-bottom: 30px;
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-content {
+      flex: 1;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .image-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+      font-size: 24px;
+      color: var(--vibrant-pink);
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: white;
+      background-color: var(--vibrant-pink);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a.back-link:hover {
+      background-color: var(--medium-pink);
+    }
+  </style>
+</head>
+<body>
+  <h2>What is Breast Cancer?</h2>
+
+  <div class="section">
+    <div class="text-content">
+      <h3>Understanding Breast Cancer</h3>
+      <p>
+        Cancer is a broad term for a class of diseases characterized by abnormal cells that grow and invade healthy cells in the body. Breast cancer starts in the cells of the breast as a group of cancer cells that can then invade surrounding tissues or spread (metastasize) to other areas of the body.
+      </p>
+    </div>
+    <div class="image-content">
+      <img src="{{ url_for('static', filename='Screenshot_2025-05-05_153006-removebg-preview.png') }}" alt="Breast Cancer Growth Illustration">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="text-content">
+      <h3>What Causes Cancer To Develop?</h3>
+      <p>
+        Cancer begins in the cells, which are the basic building blocks that make up tissue. Tissue is found in the breast and other parts of the body. Sometimes, the process of cell growth goes wrong, and new cells form when the body doesn’t need them, and old or damaged cells do not die as they should. When this occurs, a build-up of cells often forms a mass of tissue called a lump, growth, or tumor.
+      </p>
+      <p>
+        Breast cancer occurs when malignant tumors develop in the breast. These cells can spread by breaking away from the original tumor and entering blood vessels or lymph vessels, which branch into tissues throughout the body. When cancer cells travel to other parts of the body and begin damaging other tissues and organs, the process is called metastasis.
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="text-content">
+      <h3>What Causes Breast Cancer Growth?</h3>
+      <p>
+        There is much that we know and much that we have yet to understand. However, we do know that cancer spreads in three important ways:
+      </p>
+      <ul>
+        <li>Damaged cells replicate, creating more damaged cells and tumor growth.</li>
+        <li>Our body’s hormones and chemicals can accelerate the growth of some tumors.</li>
+        <li>Lymph and blood vessels can carry the cancer to other areas of the body, and lymph node examination can help pinpoint the progression of the disease.</li>
+      </ul>
+    </div>
+  </div>
+
+  <a href="{{ url_for('about') }}" class="back-link">← Back</a>
+</body>
+</html>

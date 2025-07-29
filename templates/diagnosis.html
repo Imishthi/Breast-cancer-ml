@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breast Cancer Screening</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFBECF;
+      --medium-pink: #F58695;
+      --vibrant-pink: #d04b6a;
+      --deep-maroon: #670D2F;
+      --info-pink: #ffe6ed;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff3f6;
+      color: var(--text-dark);
+      padding: 50px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: var(--deep-maroon);
+      margin-bottom: 40px;
+      border-left: 5px solid var(--vibrant-pink);
+      padding-left: 15px;
+      display: inline-block;
+    }
+
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card-item {
+      display: flex;
+      align-items: flex-start;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      gap: 20px;
+      border-left: 5px solid var(--vibrant-pink);
+    }
+
+    .card-icon {
+      font-size: 28px;
+      background-color: var(--light-pink);
+      color: var(--vibrant-pink);
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      flex-shrink: 0;
+    }
+
+    .card-item strong {
+      color: var(--vibrant-pink);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: white;
+      background-color: var(--vibrant-pink);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: var(--medium-pink);
+    }
+  </style>
+</head>
+<body>
+  <h2>Breast Cancer Screening & Diagnostic Tools</h2>
+
+  <div class="card-list">
+    <div class="card-item">
+      <div class="card-icon">📋</div>
+      <div>
+        <strong>Breast Cancer Screening:</strong>
+        Regular screenings, including breast self-exams, mammograms, and clinical breast exams, can help detect cancer before any signs or symptoms appear.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">🖼</div>
+      <div>
+        <strong>Diagnostic Mammogram:</strong>
+        This test is used when signs of breast cancer are present or after suspicious findings appear on a screening mammogram.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">📡</div>
+      <div>
+        <strong>Ultrasound:</strong>
+        An ultrasound helps determine if a breast lump is a fluid-filled cyst or a solid mass that may suggest cancer.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">🧲</div>
+      <div>
+        <strong>MRI (Magnetic Resonance Imaging):</strong>
+        Breast MRIs use magnetic fields and radio waves to provide detailed images of the breast, particularly useful in identifying the size and location of abnormalities.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">🔬</div>
+      <div>
+        <strong>Breast Biopsy:</strong>
+        In a biopsy, tissue or fluid is removed from a suspicious area in the breast and examined under a microscope to confirm the presence of cancer.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">🧪</div>
+      <div>
+        <strong>Lab Tests:</strong>
+        Tests like hormone receptor and HER2/neu testing help determine how the cancer behaves and guide treatment choices.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon">⏳</div>
+      <div>
+        <strong>Waiting for Results:</strong>
+        Waiting for screening or test results can be stressful. Taking time for self-care and emotional support can help you manage anxiety during this period.
+      </div>
+    </div>
+  </div>
+
+  <a href="{{ url_for('about') }}" class="back-link">← Back</a>
+</body>
+</html>

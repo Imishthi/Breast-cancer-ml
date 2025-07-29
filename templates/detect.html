@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detect Cancer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --light-pink: #FFBECF;
+            --medium-pink: #F58695;
+            --vibrant-pink: #FF6185;
+            --deep-maroon: #670D2F;
+            --soft-yellow: #FFF078;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, var(--light-pink), #FFE4EC);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--deep-maroon);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            width: 60px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.2;
+            color: white;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--light-pink);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--soft-yellow);
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        h2 {
+            color: var(--deep-maroon);
+            margin-bottom: 25px;
+        }
+
+        .info-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .info-icon {
+            color: #555;
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .info-icon:hover {
+            transform: scale(1.3);
+        }
+
+        .info-popup {
+            display: none;
+            background-color: #fff;
+            color: #333;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            z-index: 100;
+            width: 250px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .info-popup.active {
+            display: block;
+            opacity: 1;
+        }
+
+        button {
+            background-color: var(--vibrant-pink);
+            color: white;
+            border: none;
+            font-size: 16px;
+            padding: 14px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: var(--medium-pink);
+        }
+
+        .report-box {
+            background-color: #fef6f8;
+            border-left: 6px solid var(--vibrant-pink);
+            padding: 20px;
+            margin-top: 30px;
+            text-align: left;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(255, 97, 133, 0.2);
+        }
+
+        .report-box h3 {
+            color: var(--deep-maroon);
+            margin-top: 0;
+        }
+
+        .report-box p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: var(--deep-maroon);
+            text-align: center;
+            padding: 16px;
+            font-size: 14px;
+            color: var(--light-pink);
+            margin-top: auto;
+        }
+
+        footer span {
+            color: var(--soft-yellow);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <div class="logo-container">
+                <img src="static/Screenshot_2025-05-05_124825-removebg-preview.png" alt="Logo Icon">
+                <div class="logo-text">
+                    <div>PREDICT</div>
+                    <div>AND</div>
+                    <div>DETECT</div>
+                    <div>BREAST CANCER</div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/choose">Detection/Prediction</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Detect Existing Breast Cancer</h2>
+
+        <form action="/detect_cancer" method="post">
+            <div class="info-container">
+                <input type="text" name="radius_mean" placeholder="Radius Mean" required>
+                <span class="info-icon" onclick="showInfo('radius')">i</span>
+                <div id="info-radius" class="info-popup">Average distance from the center to points on the perimeter of the tumor.</div>
+            </div>
+
+            <div class="info-container">
+                <input type="text" name="texture_mean" placeholder="Texture Mean" required>
+                <span class="info-icon" onclick="showInfo('texture')">i</span>
+                <div id="info-texture" class="info-popup">Standard deviation of gray-scale values of the tumor image.</div>
+            </div>
+
+            <div class="info-container">
+                <input type="text" name="perimeter_mean" placeholder="Perimeter Mean" required>
+                <span class="info-icon" onclick="showInfo('perimeter')">i</span>
+                <div id="info-perimeter" class="info-popup">The perimeter of the tumor shape, averaged over the sample.</div>
+            </div>
+
+            <div class="info-container">
+                <input type="text" name="area_mean" placeholder="Area Mean" required>
+                <span class="info-icon" onclick="showInfo('area')">i</span>
+                <div id="info-area" class="info-popup">The area covered by the tumor in the image.</div>
+            </div>
+
+            <div class="info-container">
+                <input type="text" name="smoothness_mean" placeholder="Smoothness Mean" required>
+                <span class="info-icon" onclick="showInfo('smoothness')">i</span>
+                <div id="info-smoothness" class="info-popup">Variability in the tumor boundary (lower is smoother).</div>
+            </div>
+
+            <button type="submit">Detect Cancer</button>
+        </form>
+
+        {% if detection_text %}
+        <div class="report-box">
+            <h3>Detection Report</h3>
+            <p><strong>Tumor Classification:</strong> {{ detection_text }}</p>
+            <p><strong>Explanation:</strong> This result is based on key tumor features like radius, texture, perimeter, area, and smoothness.</p>
+            <p><strong>Recommendation:</strong> If the tumor is malignant, we recommend immediate medical consultation for further screening and treatment.</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        Made with <span>❤️</span> by PALAK, MISHTHI AND NISHTHA
+    </footer>
+
+    <script>
+        function showInfo(field) {
+            const popup = document.getElementById('info-' + field);
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

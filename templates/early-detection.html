@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Early Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFBECF;
+      --medium-pink: #F58695;
+      --vibrant-pink: #d04b6a;
+      --deep-maroon: #670D2F;
+      --info-pink: #ffe6ed;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff3f6;
+      color: var(--text-dark);
+      padding: 50px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: var(--deep-maroon);
+      margin-bottom: 40px;
+      border-left: 5px solid var(--vibrant-pink);
+      padding-left: 15px;
+      display: inline-block;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      gap: 20px;
+      border-left: 5px solid var(--vibrant-pink);
+      margin-bottom: 30px;
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-content {
+      flex: 1;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .image-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+      font-size: 24px;
+      color: var(--vibrant-pink);
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: white;
+      background-color: var(--vibrant-pink);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a.back-link:hover {
+      background-color: var(--medium-pink);
+    }
+  </style>
+</head>
+<body>
+  <h2>Early Detection</h2>
+
+  <!-- Section 1 -->
+  <div class="section">
+    <div class="image-content">
+      <img src="{{ url_for('static', filename='Screenshot_2025-05-05_235638-removebg-preview.png') }}" alt="Signs and Symptoms Overview">
+    </div>
+    <div class="text-content">
+      <h3>Understanding the Signs and Symptoms</h3>
+      <p>
+        Recognizing the early signs of breast cancer is crucial for timely diagnosis and treatment. Awareness empowers individuals to take proactive steps towards their health.
+        Knowing what to look for and when to seek help can make all the difference. Educating yourself and others is a powerful step in reducing risk and improving outcomes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section">
+    <div class="text-content">
+      <h3>Common Physical Changes</h3>
+      <ul>
+        <li>New lump or mass in the breast or underarm</li>
+  <li>Swelling or thickening of part of the breast</li>
+  <li>Irritation or dimpling of breast skin</li>
+  <li>Redness or flaky skin in the nipple area</li>
+  <li>Pulling in of the nipple or pain in the nipple area</li>
+  <li>Nipple discharge other than breast milk, including blood</li>
+  <li>Any change in the size or shape of the breast</li>
+  <li>Pain in any area of the breast</li>
+  <li>Unexplained rash around the nipple</li>
+  <li>Sudden visible veins on the breast</li>
+  <li>Itchy or scaly skin on the breast or nipple</li>
+  <li>Swelling or lumps around the collarbone or armpit area</li>
+  <li>Inversion (turning inward) of the nipple</li>
+  <li>Skin on the breast appearing puckered or like an orange peel (peau d’orange)</li>
+      </ul>
+    </div>
+    <div class="image-content">
+      <img src="{{ url_for('static', filename='Screenshot_2025-05-05_220413-removebg-preview.png') }}" alt="Breast Cancer Illustration">
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section">
+    <div class="image-content">
+      <img src="{{ url_for('static', filename='Screenshot_2025-05-05_221719-removebg-preview (1).png') }}" alt="Consult a Doctor">
+    </div>
+    <div class="text-content">
+      <h3>When to See a Doctor</h3>
+      <p>
+        If you observe any of the above signs, consult a healthcare professional promptly.
+        While these symptoms can also occur with non-cancerous conditions, it's important to investigate them early.
+        Early diagnosis improves the chances of successful treatment and provides peace of mind.
+        Regular checkups, self-examinations, and open communication with your doctor are key to staying ahead.
+      </p>
+    </div>
+  </div>
+
+  <a href="{{ url_for('about') }}" class="back-link">← Back</a>
+</body>
+</html>

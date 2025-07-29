@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Breast Cancer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFBECF;
+      --medium-pink: #F58695;
+      --vibrant-pink: #d04b6a;
+      --deep-maroon: #670D2F;
+      --soft-yellow: #FFF078;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, var(--light-pink), #FFE4EC);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--deep-maroon);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-container img {
+      width: 60px;
+      height: auto;
+    }
+
+    .logo-text {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.2;
+      color: white;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--light-pink);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--soft-yellow);
+    }
+
+    .container {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--deep-maroon);
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 24px;
+      padding: 50px 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      color: var(--deep-maroon);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-icon {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: var(--deep-maroon);
+      text-align: center;
+      padding: 16px;
+      font-size: 14px;
+      color: var(--light-pink);
+      margin-top: auto;
+    }
+
+    footer span {
+      color: var(--soft-yellow);
+    }
+
+    @media (max-width: 992px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <div class="logo-container">
+        <img src="static/Screenshot_2025-05-05_124825-removebg-preview.png" alt="Logo Icon">
+        <div class="logo-text">
+          <div>PREDICT</div>
+          <div>AND</div>
+          <div>DETECT</div>
+          <div>BREAST CANCER</div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/choose">Detection/Prediction</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>About Breast Cancer</h1>
+    <div class="card-grid">
+      <div class="card" onclick="location.href='/about/what-is-breast-cancer'">
+        <div class="card-icon">🎗️</div>
+        <div class="card-title">What is Breast Cancer?</div>
+      </div>
+      <div class="card" onclick="location.href='/about/early-detection'">
+        <div class="card-icon">🩺</div>
+        <div class="card-title">Early Detection</div>
+      </div>
+      <div class="card" onclick="location.href='/about/diagnosis'">
+        <div class="card-icon">🔬</div>
+        <div class="card-title">Diagnosis</div>
+      </div>
+      <div class="card" onclick="location.href='/about/stages'">
+        <div class="card-icon">📊</div>
+        <div class="card-title">Stages</div>
+      </div>
+      <div class="card" onclick="location.href='/about/types'">
+        <div class="card-icon">📋</div>
+        <div class="card-title">Types of Breast Cancer</div>
+      </div>
+      <div class="card" onclick="location.href='/about/treatment'">
+        <div class="card-icon">💊</div>
+        <div class="card-title">Treatment</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Made with <span>❤️</span> by PALAK, MISHTHI AND NISHTHA
+  </footer>
+</body>
+</html>

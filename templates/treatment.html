@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breast Cancer Treatments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFBECF;
+      --medium-pink: #F58695;
+      --vibrant-pink: #d04b6a;
+      --deep-maroon: #670D2F;
+      --text-dark: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff3f6;
+      color: var(--text-dark);
+      padding: 50px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: var(--deep-maroon);
+      margin-bottom: 40px;
+      border-left: 5px solid var(--vibrant-pink);
+      padding-left: 15px;
+      display: inline-block;
+    }
+
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card-item {
+      display: flex;
+      align-items: flex-start;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      gap: 20px;
+      border-left: 5px solid var(--vibrant-pink);
+    }
+
+    .card-icon img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      background-color: var(--light-pink);
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .card-item strong {
+      color: var(--vibrant-pink);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: white;
+      background-color: var(--vibrant-pink);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: var(--medium-pink);
+    }
+  </style>
+</head>
+<body>
+  <h2>Breast Cancer Treatment Options</h2>
+
+  <div class="card-list">
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828813.png" alt="Overview"></div>
+      <div>
+        <strong>Treatment Overview:</strong>
+        Most treatment plans include a combination of surgery, radiation, hormone therapy, chemotherapy, and targeted therapies.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/3875/3875611.png" alt="Doctor"></div>
+      <div>
+        <strong>Choosing Your Doctor:</strong>
+        Your care team may include a medical oncologist, surgical oncologist, and other specialists.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913601.png" alt="Chemotherapy"></div>
+      <div>
+        <strong>Chemotherapy:</strong>
+        Uses drugs to destroy or slow cancer cell growth.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913602.png" alt="Radiation"></div>
+      <div>
+        <strong>Radiation Therapy:</strong>
+        Uses high-energy rays to kill remaining cancer cells after surgery.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913603.png" alt="Hormone Therapy"></div>
+      <div>
+        <strong>Hormone Therapy:</strong>
+        Blocks or lowers hormones to treat hormone receptor-positive breast cancers.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913604.png" alt="Targeted Therapy"></div>
+      <div>
+        <strong>Targeted Therapy:</strong>
+        Uses drugs to block the growth of cancer cells without harming normal cells.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913605.png" alt="Side Effects"></div>
+      <div>
+        <strong>Managing Side Effects:</strong>
+        Many side effects can be managed with your care team’s help.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913606.png" alt="Clinical Trials"></div>
+      <div>
+        <strong>Standard vs. Clinical Trials:</strong>
+        Standard treatments are proven; trials may offer new options.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913607.png" alt="Nutrition"></div>
+      <div>
+        <strong>Wellness & Nutrition:</strong>
+        Healthy habits during treatment support overall well-being.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913608.png" alt="Follow Up"></div>
+      <div>
+        <strong>Follow-Up Care:</strong>
+        Regular checkups help monitor your health after treatment.
+      </div>
+    </div>
+
+    <div class="card-item">
+      <div class="card-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913609.png" alt="Surgery"></div>
+      <div>
+        <strong>Surgery:</strong>
+        Common procedures include lumpectomy, mastectomy, and reconstruction.
+      </div>
+    </div>
+  </div>
+
+  <a href="{{ url_for('about') }}" class="back-link">← Back</a>
+</body>
+</html>
